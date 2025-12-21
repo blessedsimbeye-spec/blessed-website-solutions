@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Navigation -->
 <nav class="bg-white shadow px-6 py-4 flex justify-between items-center">
   <h1 class="text-2xl font-bold text-green-700">Blessed Website Solutions</h1>
   <ul class="flex gap-6">
     <li><a href="index.html">Home</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
@@ -22,66 +23,40 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
-    <h1 class="hero-text">Websites That Grow Local Businesses</h1>
-    <p class="hero-text">We design, host, and manage modern websites for businesses in Ndola & Kitwe.</p>
-    <a href="https://wa.me/260974688532" class="btn hero-text">Get a Website on WhatsApp</a>
+    <h1 class="hero-text">Professional Websites for Local Businesses</h1>
+    <p class="hero-text">Modern, responsive, and fully functional websites in Ndola & Kitwe.</p>
+    <a href="https://wa.me/260974688532" class="btn hero-text">Get Started on WhatsApp</a>
   </div>
 </section>
 
-<!-- Services Section -->
+<!-- Services Preview -->
 <section class="py-16 px-6 max-w-6xl mx-auto text-center">
   <h2 class="text-3xl font-bold mb-6">Our Services</h2>
   <div class="grid md:grid-cols-3 gap-8">
     <div class="card p-6">
-      <img src="images/web-design.jpg" alt="Website Design" class="rounded-t-xl mb-3">
-      <h3 class="text-xl font-bold mb-2">Website Design</h3>
-      <p>Modern, mobile-friendly websites designed to attract customers.</p>
+      <img src="images/service1.jpg" alt="Website Design" class="rounded-t-xl mb-3">
+      <h3 class="text-xl font-bold mb-2"><span class="service-icon">💻</span>Website Design</h3>
+      <p>Custom designs tailored to your business needs.</p>
     </div>
     <div class="card p-6">
-      <img src="images/hosting.jpg" alt="Hosting & Maintenance" class="rounded-t-xl mb-3">
-      <h3 class="text-xl font-bold mb-2">Hosting & Maintenance</h3>
-      <p>We host your website and keep it running smoothly every month.</p>
+      <img src="images/service2.jpg" alt="Updates & Maintenance" class="rounded-t-xl mb-3">
+      <h3 class="text-xl font-bold mb-2"><span class="service-icon">🛠️</span>Updates & Maintenance</h3>
+      <p>We keep your website up-to-date and secure.</p>
     </div>
     <div class="card p-6">
-      <img src="images/whatsapp.jpg" alt="WhatsApp Integration" class="rounded-t-xl mb-3">
-      <h3 class="text-xl font-bold mb-2">WhatsApp Integration</h3>
-      <p>Direct WhatsApp buttons so customers can contact you instantly.</p>
+      <img src="images/service3.jpg" alt="WhatsApp Integration" class="rounded-t-xl mb-3">
+      <h3 class="text-xl font-bold mb-2"><span class="service-icon">💬</span>WhatsApp Integration</h3>
+      <p>Enable direct contact with your customers via WhatsApp.</p>
     </div>
   </div>
 </section>
 
-<!-- Portfolio Section -->
-<section class="py-16 px-6 max-w-6xl mx-auto text-center">
-  <h2 class="text-3xl font-bold mb-6">Our Portfolio</h2>
-  <div class="card max-w-sm mx-auto">
-    <img src="images/web-design.jpg" alt="Blessed Lodging" class="rounded-t-xl">
-    <h3 class="text-xl font-bold my-2">Blessed Lodging</h3>
-    <p>Modern lodge website with WhatsApp booking.</p>
-    <a href="https://blessed-lodging.vercel.app" class="btn mt-3" target="_blank">View Live</a>
-  </div>
-</section>
-
-<!-- Footer -->
 <footer class="py-6 text-center text-sm bg-gray-50">
   © 2025 Blessed Website Solutions | WhatsApp: 0974688532
 </footer>
 
-<!-- Floating WhatsApp -->
 <a href="https://wa.me/260974688532" class="whatsapp-float">💬</a>
 
-<!-- Hero Text Animation -->
-<script>
-  const texts = document.querySelectorAll('.hero-text');
-  texts.forEach((text, index) => {
-    text.style.opacity = 0;
-    text.style.transform = 'translateY(20px)';
-    setTimeout(() => {
-      text.style.transition = 'all 1s ease-out';
-      text.style.opacity = 1;
-      text.style.transform = 'translateY(0)';
-    }, 300 * index);
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
