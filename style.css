@@ -37,15 +37,9 @@ nav ul li a:hover {
   color: white;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+.hero h1, .hero p, .hero .btn {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 /* ====== BUTTONS ====== */
@@ -120,6 +114,7 @@ img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 /* ====== HEADINGS ====== */
