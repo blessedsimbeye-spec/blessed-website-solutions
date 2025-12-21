@@ -1,132 +1,38 @@
-/* ====== GLOBAL ====== */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9fafb;
-  color: #1f2937;
-}
+/* General Styles */
+body { font-family: Arial, sans-serif; margin:0; padding:0; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+/* Navbar */
+nav a:hover { color: #15803d; }
 
-/* ====== NAVIGATION ====== */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-nav ul li a:hover {
-  color: #16a34a;
-  transition: 0.3s;
-}
-
-/* ====== HERO ====== */
+/* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('images/hero.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero.jpg') center/cover no-repeat;
   height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  position: relative;
 }
+.hero-text { opacity: 0; transform: translateY(20px); transition: all 1s ease-out; }
+.hero-text.visible { opacity: 1; transform: translateY(0); }
 
-.hero h1, .hero p, .hero .btn {
-  opacity: 0;
-  transform: translateY(20px);
-}
+/* Cards */
+.card { position: relative; overflow: hidden; background: white; border-radius: 20px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: all 0.3s ease; border-top: 4px solid #16a34a; }
+.card::after { content:""; position:absolute; bottom:0; left:0; width:100%; height:40%; background:linear-gradient(to top, rgba(0,0,0,0.15), transparent); border-radius:0 0 20px 20px; pointer-events:none; }
+.card:hover { transform: scale(1.05); box-shadow:0 15px 30px rgba(0,0,0,0.2); border-top: 4px solid #15803d; }
+.card img { width:100%; border-radius:10px; margin-bottom:15px; transition: transform 0.5s ease, filter 0.5s ease; }
+.card:hover img { transform: scale(1.07); filter: brightness(1.05); }
+.service-icon { display:inline-block; margin-right:6px; transition: transform 0.3s ease; }
+.card:hover .service-icon { transform: translateY(-5px); }
 
-/* ====== BUTTONS ====== */
-.btn {
-  background: #16a34a;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-weight: 600;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
+/* Buttons */
+.btn { background:#16a34a; color:white; padding:15px 30px; border-radius:30px; font-weight:600; transition: all 0.3s ease, box-shadow 0.3s ease; }
+.btn:hover { background:#15803d; transform: translateY(-2px); box-shadow:0 8px 15px rgba(0,0,0,0.2); }
 
-.btn:hover {
-  background: #15803d;
-  transform: translateY(-2px);
-}
-
-/* ====== CARDS ====== */
-.card {
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-/* ====== GRID ====== */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-@media(min-width: 768px) {
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ====== FOOTER ====== */
-footer {
-  background: #111827;
-  color: #d1d5db;
-}
-
-/* ====== WHATSAPP FLOATING BUTTON ====== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 16px;
-  border-radius: 50%;
-  font-size: 22px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  z-index: 999;
-}
-
-.whatsapp-float:hover {
-  background: #1ebe5d;
-}
-
-/* ====== IMAGES ====== */
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-/* ====== HEADINGS ====== */
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-/* ====== SPACING ====== */
-section {
-  padding: 60px 20px;
-}
-
-.hero-content {
-  max-width: 800px;
-}
+/* Floating WhatsApp */
+.whatsapp-float { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:16px; border-radius:50%; font-size:22px; box-shadow:0 10px 20px rgba(0,0,0,0.3); z-index:999; }
+.whatsapp-float:hover { background:#1ebe5d; }
