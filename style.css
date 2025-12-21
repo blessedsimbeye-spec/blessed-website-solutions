@@ -1,4 +1,137 @@
+/* ====== GLOBAL ====== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ====== NAVIGATION ====== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+nav ul li a:hover {
+  color: #16a34a;
+  transition: 0.3s;
+}
+
+/* ====== HERO ====== */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
               url('images/hero.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ====== BUTTONS ====== */
+.btn {
+  background: #16a34a;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+}
+
+/* ====== CARDS ====== */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ====== GRID ====== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media(min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #111827;
+  color: #d1d5db;
+}
+
+/* ====== WHATSAPP FLOATING BUTTON ====== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.whatsapp-float:hover {
+  background: #1ebe5d;
+}
+
+/* ====== IMAGES ====== */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ====== HEADINGS ====== */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* ====== SPACING ====== */
+section {
+  padding: 60px 20px;
+}
+
+.hero-content {
+  max-width: 800px;
 }
