@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Blessed Website Solutions</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>...</nav>
+<nav class="bg-white shadow px-6 py-4 flex justify-between items-center">
+  <h1 class="text-2xl font-bold text-green-700">Blessed Website Solutions</h1>
+  <ul class="flex gap-6">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-<section class="py-16 text-center">
+<section class="py-16 px-6 max-w-6xl mx-auto text-center">
   <h1 class="text-4xl font-bold mb-6">Our Work</h1>
 
-  <div class="card max-w-xl mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-2">Blessed Lodging</h2>
-    <p class="mb-4">Modern lodge website with booking via WhatsApp.</p>
-    <a href="https://blessed-lodging.vercel.app" class="btn" target="_blank">
-      View Live Website
-    </a>
+  <div class="card max-w-sm mx-auto">
+    <img src="images/web-design.jpg" alt="Blessed Lodging" class="rounded-t-xl">
+    <h3 class="text-xl font-bold my-2">Blessed Lodging</h3>
+    <p>Modern lodge website with WhatsApp booking.</p>
+    <a href="https://blessed-lodging.vercel.app" class="btn mt-3" target="_blank">View Live</a>
   </div>
 </section>
+
+<footer class="py-6 text-center text-sm bg-gray-50">
+  © 2025 Blessed Website Solutions | WhatsApp: 0974688532
+</footer>
 
 <a href="https://wa.me/260974688532" class="whatsapp-float">💬</a>
 
