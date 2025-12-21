@@ -22,9 +22,9 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Websites That Grow Local Businesses</h1>
-    <p>We design, host, and manage modern websites for businesses in Ndola & Kitwe.</p>
-    <a href="https://wa.me/260974688532" class="btn">Get a Website on WhatsApp</a>
+    <h1 class="hero-text">Websites That Grow Local Businesses</h1>
+    <p class="hero-text">We design, host, and manage modern websites for businesses in Ndola & Kitwe.</p>
+    <a href="https://wa.me/260974688532" class="btn hero-text">Get a Website on WhatsApp</a>
   </div>
 </section>
 
@@ -65,6 +65,20 @@
 
 <!-- Floating WhatsApp -->
 <a href="https://wa.me/260974688532" class="whatsapp-float">💬</a>
+
+<!-- Hero Text Animation -->
+<script>
+  const texts = document.querySelectorAll('.hero-text');
+  texts.forEach((text, index) => {
+    text.style.opacity = 0;
+    text.style.transform = 'translateY(20px)';
+    setTimeout(() => {
+      text.style.transition = 'all 1s ease-out';
+      text.style.opacity = 1;
+      text.style.transform = 'translateY(0)';
+    }, 300 * index);
+  });
+</script>
 
 </body>
 </html>
