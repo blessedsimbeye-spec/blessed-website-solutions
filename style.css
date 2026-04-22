@@ -126,4 +126,28 @@ footer {
   border-radius: 50%;
   color: white;
   font-size: 22px;
+}html, body {
+  height: 100%;
+}
+
+/* HERO FULL HEIGHT */
+.hero {
+  min-height: 100vh; /* fills full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SECTION FULL HEIGHT (optional but nice) */
+.section {
+  min-height: 60vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
 }
